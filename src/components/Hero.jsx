@@ -28,7 +28,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <p className="hero__hint">Passe o mouse ou o dedo sobre o tecido para limpar</p>
     </section>
   )
 }
