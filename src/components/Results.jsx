@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { DIFFERENTIALS, GALLERY, TESTIMONIALS, SERVICE_AREA, PLACES, INSTAGRAM_URL, INSTAGRAM_HANDLE } from '../config.js'
 import { Reveal, SplitHeading, MaskImage } from './Reveal.jsx'
+import { Cushion } from './Cushion.jsx'
 
 function Gallery() {
   // Só aparece com fotos reais cadastradas em GALLERY (config.js).
@@ -47,6 +48,12 @@ function Area() {
 
   return (
     <div className="area">
+      <div className="area__float" aria-hidden="true">
+        <Cushion className="ac ac--1" kind="floral" a="#1d3a57" b="#8fd3ff" />
+        <Cushion className="ac ac--2" kind="stripes" a="#f1f6fa" b="#3aa7ff" />
+        <Cushion className="ac ac--3" kind="dots" a="#3f78a8" b="#e8f5ff" />
+        <Cushion className="ac ac--4" kind="geo" a="#d9cbb0" b="#8b4a2b" />
+      </div>
       <Reveal className="area__intro">
         <h3 className="h3">Onde atendemos</h3>
         <p className="muted">
