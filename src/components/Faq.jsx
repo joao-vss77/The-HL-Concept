@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { FAQ } from '../config.js'
+import { SplitHeading } from './Reveal.jsx'
 
 export default function Faq() {
   const [open, setOpen] = useState(0)
 
   return (
     <section className="section faq" id="duvidas">
-      <h2 className="h2">Dúvidas frequentes</h2>
+      <p className="eyebrow">Dúvidas</p>
+      <SplitHeading className="h2" text="Perguntas frequentes" />
       <div className="faq__list">
         {FAQ.map((item, i) => {
           const isOpen = open === i

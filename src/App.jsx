@@ -1,29 +1,32 @@
 import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import Statement from './components/Statement.jsx'
+import Stage from './components/Stage.jsx'
 import Services from './components/Services.jsx'
-import Swatches from './components/Swatches.jsx'
-import Process from './components/Process.jsx'
 import BeforeAfter from './components/BeforeAfter.jsx'
-import Places from './components/Places.jsx'
+import Results from './components/Results.jsx'
 import Faq from './components/Faq.jsx'
-import Contact from './components/Contact.jsx'
+import Quote from './components/Quote.jsx'
+import Footer from './components/Footer.jsx'
+import { Curve } from './components/Reveal.jsx'
+import { ThemeContext, useThemeState } from './hooks/useTheme.js'
 
 export default function App() {
+  const theme = useThemeState()
   return (
-    <>
+    <ThemeContext.Provider value={theme}>
+      <a className="skip" href="#orcamento">
+        Pular para o orçamento
+      </a>
       <Nav />
       <main>
-        <Hero />
-        <Statement />
+        <Stage />
         <Services />
-        <Swatches />
-        <Process />
         <BeforeAfter />
-        <Places />
+        <Curve />
+        <Results />
         <Faq />
+        <Quote />
       </main>
-      <Contact />
-    </>
+      <Footer />
+    </ThemeContext.Provider>
   )
 }
